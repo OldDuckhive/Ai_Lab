@@ -6,8 +6,6 @@ namespace Pathfinding
 {
     public class PathfindingBehaviour : MonoBehaviour
     {
-        public Transform goal;
-        
         protected AIDestinationSetter TargetSetter;
         protected Ball Ball;
         protected Transform DestTarget;
@@ -32,7 +30,7 @@ namespace Pathfinding
 
         protected virtual void Update()
         {
-            BallPos = Ball.transform.position;
+            
         }
 
         protected virtual void LateUpdate()

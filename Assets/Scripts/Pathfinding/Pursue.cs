@@ -3,14 +3,15 @@ using UnityEngine;
 
 namespace Pathfinding
 {
-    public class Pursue : Seek
+    public class Pursue : PathfindingBehaviour
     {
         [SerializeField] private float maxPredict = 5.0f;
+        
+        protected Transform goal;
 
         protected override void Update()
         {
-            base.Update();
-            DestTarget.position = BallPos;
+            DestTarget.position = goal.position;
             var direction = DestTarget.position - transform.position;
             var distance = direction.magnitude;
             var speed = AgentRb.velocity.magnitude;

@@ -2,11 +2,12 @@ using UnityEngine;
 
 namespace Pathfinding
 {
-    public class Seek : PathfindingBehaviour
+    public class PursueBall : Pursue
     {
         protected override void Update()
         {
-            DestTarget.position = Ball.transform.position;
+            goal = Ball.transform;
+            base.Update();
         }
     }
 }
